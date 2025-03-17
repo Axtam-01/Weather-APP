@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Geist:wght@100..900&family=Heebo:wght@100..900&family=Inika:wght@400;700&family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=REM:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #060d18;
+  font-family: "Roboto", "sans-serif";
+  font-weight: bold;
+}
+
+.Weather_nav {
+  margin-top: 20px;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.mani_box {
+  display: flex;
+}
+
+
+.search {
+  width: 750px;
+  height: 35px;
+  border-radius: 10px;
+  color: white;
+  background: #242d3d;
+  border: none;
+  padding-left: 10px;
+}
+
+.search::placeholder {
+  color: white;
+}
+
+.menuMain {
+  max-width: 70px;
+  height: 700px;
+  background: #242d3d;
+  border-radius: 10px;
+  margin: 20px 20px 0;
+  text-align: center;
+
+}
+
+
+.img_umbrella {
+  margin: 0 auto;
+  padding-top: 25px;
+
+}
+
+.weather-icon {
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.buttonIcon {
+  background: none;
+  border: none;
+  color: #8a96a9;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.weather-container {
+  position: absolute;
+  margin: 50px;
+  display: flex;
+  gap: 250px;
+
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.temperature {
+  margin-top: 20px;
+  color: white;
+  font-size: 55px;
+}
+
+.city-name {
+  color: white;
+  font-size: 32px;
+}
+
+.rain-chance {
+  color: #8a96a9;
+}
+
+.weather-forecast {
+  background-color: #242d3d;
+  position: absolute;
+  margin: 250px 0;
+  padding-top: 15px;
+  padding-left: 15px;
+  border-radius: 12px;
+  color: #8a96a9;
+}
+
+.line {
+  width: 2px;
+  height: 70px;
+  background-color: black;
+}
+
+.temperature-block {
+  display: flex;
+  width: 740px;
+
+  justify-content: space-evenly;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.forecast-item h2 {
+  color: #dee3ed;
+}
+
+.forecast-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.air-conditions {
+  width: 755px;
+  background-color: #242d3d;
+  position: absolute;
+  margin: 434px 0 0 0;
+  padding-top: 15px;
+  padding-left: 15px;
+  border-radius: 12px;
+  color: #8a96a9;
+}
+
+.air-conditions h1 {
+  color: #dee3ed;
+  margin-top: 6px;
+}
+
+.title-action {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.see_more {
+  width: 80px;
+  height: 28px;
+  border-radius: 20px;
+  margin-top: -8px;
+  border: none;
+  color: white;
+  background-color: rgb(33, 121, 229);
+  cursor: pointer;
+}
+
+.weather_temp {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  max-width: 450px;
+  padding: 5px;
+}
+
+.second_section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+  max-width: 450px;
+
+}
+
+.temp_value p {
+  display: flex;
+  gap: 2px;
+}
+
+.wind-info p {
+  display: flex;
+  gap: 2px;
+}
+
+.humidity_level p {
+  display: flex;
+  gap: 4px;
+}
+
+.uv_index p {
+  display: flex;
+  gap: 4px;
+}
+
+.weather_forecast {
+  width: 450px;
+  height: 650px;
+  background-color: #242d3d;
+  color: #8a96a9;
+  margin-top: 70px;
+  border-radius: 10px;
+
+
+}
+
+.today_box,
+.tue_box,
+.wed,
+.thu_box,
+.fri,
+.sat_box,
+.sun_box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.tue_box p:nth-of-type(2),
+.tue_box span,
+.today_box p:nth-of-type(2),
+.today_box span,
+.wed p:nth-of-type(2),
+.wed span,
+.thu_box p:nth-of-type(2),
+.thu_box span,
+.fri p:nth-of-type(2),
+.fri span,
+.sat_box p:nth-of-type(2),
+.sat_box span,
+.sun_box p:nth-of-type(2),
+.sun_box span {
+  color: white;
+}
+
+.text_aside {
+  margin: 20px 0 0 35px;
+}
+
+.main_box {
+  display: flex;
+  gap: 20px;
+}
+
+.lines_aside {
+  width: 370px;
+  height: 0.5px;
+  background-color: #2e3e5b;
+  margin: 0 auto;
+  margin-top: 30px;
+
+}

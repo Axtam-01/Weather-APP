@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather APP</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="menuMain">
+            <img src="./img/beach_access_24dp_7CA7D8_FILL0_wght400_GRAD0_opsz24.svg" alt="umbrella"
+                class="img_umbrella">
+            <div class="weather-icon">
+                <button class="buttonIcon">
+                    <img src="./img/rainy_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="rainy">
+                    <p>Weather</p>
+                </button>
+                <button class="buttonIcon">
+                    <img src="./img/format_list_bulleted_24dp_FFFFFF.svg" alt="format_list">
+                    <p>Cities</p>
+                </button>
+                <button class="buttonIcon">
+                    <img src="./img/map_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="map">
+                    <p>Map</p>
+                </button>
+                <button class="buttonIcon">
+                    <img src="./img/tune_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="tune">
+                    <p>Settings</p>
+                </button>
+            </div>
+
+        </nav>
+
+
+        <main class="main_box">
+            <div class="sections">
+                <section class="Weather_nav">
+                    <form action="#" method="GET">
+                        <input type="text" name="search" placeholder="search for cities" class="search">
+                </section>
+
+
+
+                <section class="weather-container">
+                    <div class="weather-info">
+                        <h2 class="city-name">Madrid</h2>
+                        <p class="rain-chance">Chance of rain: <span class="rain-percentage">0%</span></p>
+                        <h1 class="temperature">31°</h1>
+
+                    </div>
+                    <img src="./img/vecteezy_yellow-sun-light-up_21657604.png" width="150px" height="150px" alt="sun">
+                </section>
+
+                <section class="weather-forecast">
+                    <p>TODAY'S FORECAST</p>
+                    <div class="temperature-block">
+                        <div class="forecast-item">
+                            <p>6.00</p>
+                            <img src="./img/cloud_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="cloud">
+                            <h2>25</h2>
+                        </div>
+                        <span class="line"></span>
+
+                        <div class="forecast-item">
+                            <p>6.00</p>
+                            <img src="./img/cloud_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="cloud">
+                            <h2>25</h2>
+                        </div>
+                        <span class="line"></span>
+
+                        <div class="forecast-item">
+                            <p>6.00</p>
+                            <img src="./img/cloud_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="cloud">
+                            <h2>25</h2>
+                        </div>
+                        <span class="line"></span>
+
+                        <div class="forecast-item">
+                            <p>6.00</p>
+                            <img src="./img/cloud_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="cloud">
+                            <h2>25</h2>
+                        </div>
+                        <span class="line"></span>
+
+                        <div class="forecast-item">
+                            <p>6.00</p>
+                            <img src="./img/cloud_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="cloud">
+                            <h2>25</h2>
+                        </div>
+                        <span class="line"></span>
+
+                        <div class="forecast-item">
+                            <p>6.00</p>
+                            <img src="./img/cloud_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="cloud">
+                            <h2>25</h2>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="air-conditions">
+                    <div class="title-action">
+                        <p>AIR CONDITIONS</p>
+                        <button class="see_more">see more</button>
+                    </div>
+                    <div class="weather_temp">
+
+                        <div class="temp_value">
+                            <p><img src="./img/device_thermostat_24dp_CCCCCC_FILL0_wght400_GRAD0_opsz24.svg"
+                                    alt="temperature">Real
+                                Feel</p>
+                            <h1><span>31</span>°</h1>
+                        </div>
+
+                        <div class="wind-info">
+                            <p> <img src="./img/air_24dp_CCCCCC_FILL0_wght400_GRAD0_opsz24.svg" alt="temperature">Wind
+                            </p>
+                            <h1><span>24</span> km/h</h1>
+                        </div>
+                    </div>
+                    <div class="second_section">
+                        <div class="humidity_level">
+                            <p><img src="./img/water_drop_24dp_CCCCCC_FILL0_wght400_GRAD0_opsz24.svg"
+                                    alt=" Chance of rain">
+                                Chance
+                                of rain</p>
+                            <h1><span>0</span> %</h1>
+                        </div>
+
+                        <div class="uv_index">
+                            <p><img src="./img/brightness_5_24dp_CCCCCC_FILL0_wght400_GRAD0_opsz24.svg" alt="UV Index">
+                                UV
+                                Index
+                            </p>
+                            <h1>3</h1>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <aside class="weather_forecast">
+                <p class="text_aside">7-DAY FORECAST</p>
+
+                <div class="today_box">
+                    <p>Today</p>
+                    <img src="./img/sunny_24dp_FFFF55_FILL0_wght400_GRAD0_opsz24.svg" alt="sunn">
+                    <p>Sunny</p>
+                    <p><span>36</span>/22</p>
+                </div>
+                <p class="lines_aside"></p>
+
+
+
+                <div class="tue_box">
+                    <p>Tue</p>
+                    <img src="./img/sunny_24dp_FFFF55_FILL0_wght400_GRAD0_opsz24.svg" alt="sunn">
+                    <p>Sunny</p>
+                    <p><span>37</span>/21</p>
+                </div>
+                <p class="lines_aside"></p>
+                <div class="wed">
+                    <p>Wed</p>
+                    <img src="./img/sunny_24dp_FFFF55_FILL0_wght400_GRAD0_opsz24.svg" alt="sunn">
+                    <p>Sunny</p>
+                    <p><span>37</span>/21</p>
+                </div>
+                <p class="lines_aside"></p>
+                <div class="thu_box">
+                    <p>Thu</p>
+                    <img src="./img/cloud_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="cloud">
+                    <p>Cloudy</p>
+                    <p><span>37</span>/21</p>
+                </div>
+                <p class="lines_aside"></p>
+                <div class="fri">
+                    <p>Fri</p>
+                    <img src="./img/cloud_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="cloud">
+                    <p> Cloud</p>
+                    <p><span>37</span>/21</p>
+                </div>
+                <p class="lines_aside"></p>
+                <div class="sat_box">
+                    <p>Sat</p>
+                    <img src="./img/rainy_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="sunn">
+                    <p>Rainy</p>
+                    <p><span>37</span>/21</p>
+                </div>
+                <p class="lines_aside"></p>
+                <div class="sun_box">
+                    <p>Sun</p>
+                    <img src="./img/sunny_24dp_FFFF55_FILL0_wght400_GRAD0_opsz24.svg" alt="sunn">
+                    <p>Sunny</p>
+                    <p><span>37</span>/21</p>
+                </div>
+            </aside>
+
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="./js.js">
+</body>
+
+</html>
