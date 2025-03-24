@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     searchInput.addEventListener("keypress", function (e) {
         if (e.key === "Enter") {
-            e.preventDefault();
+            //  e.preventDefault();
             const city = searchInput.value.trim();
             if (city) {
                 getWeather(city);
@@ -118,4 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Error fetching air conditions:", error);
         }
     }
+
+
+    
+    
 });
