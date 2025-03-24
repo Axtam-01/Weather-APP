@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     searchInput.addEventListener("keypress", function (e) {
         if (e.key === "Enter") {
-            //  e.preventDefault();
-            const city = searchInput.value.trim();
+                       const city = searchInput.value.trim();
             if (city) {
                 getWeather(city);
                 getHourlyForecast(city);
@@ -117,9 +116,16 @@ document.addEventListener("DOMContentLoaded", function () {
         } catch (error) {
             console.error("Error fetching air conditions:", error);
         }
-    }
+    }    
 
-
-    
-    
 });
+
+function openNav() {
+    document.getElementById("sidebar").classList.add("open");
+}
+
+function closeNav() {
+    document.getElementById("sidebar").classList.remove("open");
+}
+
+

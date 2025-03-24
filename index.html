@@ -11,10 +11,15 @@
 <body>
 
     <div class="container">
-        <nav class="menuMain">
-            <img src="./img/beach_access_24dp_7CA7D8_FILL0_wght400_GRAD0_opsz24.svg" alt="umbrella"
-                class="img_umbrella">
+        <button class="openBtn" onclick="openNav()">☰</button>
+        
+        <nav class="menuMain" id="sidebar">
+           
+
             <div class="weather-icon">
+                <button class="closeBtn" onclick="closeNav()">✖</button>
+                <img src="./img/beach_access_24dp_7CA7D8_FILL0_wght400_GRAD0_opsz24.svg" alt="umbrella"
+                    class="img_umbrella">
                 <button class="buttonIcon">
                     <img src="./img/rainy_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="rainy">
                     <p>Weather</p>
@@ -31,23 +36,27 @@
                     <img src="./img/tune_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="tune">
                     <p>Settings</p>
                 </button>
+
             </div>
+
         </nav>
 
 
         <main class="main_box">
             <div class="sections">
                 <section class="Weather_nav">
-                    <!-- <form action="#" method="GET"> -->
+                 
                     <input type="text" name="search" placeholder="search for cities" class="search">
-                    <!-- </form> -->
+                
 
                 </section>
 
 
 
                 <section class="weather-container">
+
                     <div class="weather-info">
+
                         <h2 class="city-name">Madrid</h2>
                         <p class="rain-chance">Chance of rain: <span class="rain-percentage">0%</span></p>
                         <h1 class="temperature">31°</h1>
@@ -59,9 +68,12 @@
                 </section>
 
                 <section class="weather-forecast">
+
                     <p>TODAY'S FORECAST</p>
                     <div class="temperature-block">
+
                         <div class="forecast-item">
+
                             <p>6.00</p>
                             <img src="./img/cloud_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="cloud">
                             <h2>25</h2>
