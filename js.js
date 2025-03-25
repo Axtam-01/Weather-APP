@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }    
 
+  
 });
 
 function openNav() {
@@ -127,5 +128,4 @@ function openNav() {
 function closeNav() {
     document.getElementById("sidebar").classList.remove("open");
 }
-
 
