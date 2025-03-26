@@ -30,11 +30,14 @@ body {
 
 @media screen and (max-width: 480px) {
   body {
+
     font-size: 14px;
   }
-.search{
-  text-align: center;
-}
+
+  .search {
+    text-align: center;
+  }
+
   .menuMain {
     left: -140px;
     width: 140px;
@@ -123,7 +126,7 @@ body {
 
   .titleForecast {
     text-align: center;
-  
+
 
   }
 
@@ -143,10 +146,25 @@ body {
     background: #242d3d;
     padding: 9px;
     border-radius: 8px;
+    max-width: 100px;
+   margin: 0 auto;
   }
 
   .line {
     display: none;
+  }
+
+  .main_box {
+    display: flex;
+    gap: 20px;
+    margin: 0 150px 0 0;
+
+  }
+
+  .weather_temp {
+    display: flex;
+    min-width: 330px;
+
   }
 }
 
@@ -170,7 +188,7 @@ body {
 
 .container {
   display: flex;
-  justify-content:center;
+  justify-content: center;
 
 }
 
@@ -187,6 +205,7 @@ body {
   background: #242d3d;
   border: none;
   padding-left: 10px;
+  outline: none;
 }
 
 .search::placeholder {
@@ -252,10 +271,9 @@ body {
 }
 
 .weather-forecast {
-
+  width: 100%;
   text-align: center;
   padding: 30px;
-  width: 100%;
   margin: 0 auto;
   color: #8a96a9;
   background-color: #242d3d;
@@ -312,14 +330,14 @@ body {
 .title-action {
   display: flex;
   justify-content: space-between;
-  padding: 5px 20px;
+  padding: 6px 22px;
+  align-items: center;
 }
 
 .see_more {
   width: 80px;
   height: 28px;
   border-radius: 20px;
-  margin-top: -8px;
   border: none;
   color: white;
   background-color: rgb(33, 121, 229);
@@ -328,22 +346,33 @@ body {
 
 .weather_temp {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
-  max-width: 450px;
+  /* max-width: 450px; */
+  flex-wrap: wrap;
+  gap: 100px;
   padding: 5px;
-}
-
-.second_section {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-  margin-bottom: 10px;
-  text-align: center;
-  max-width: 450px;
-  padding-bottom: 20px;
 
 }
+
+.temp_value {
+  max-width: 95px;
+}
+
+.wind-info {
+  max-width: 95px;
+}
+
+.humidity_level {
+  max-width: 95px;
+  margin-top: -50px;
+}
+
+.uv_index {
+  max-width: 95px;
+  margin-top: -40px;
+}
+
 
 .temp_value p {
   display: flex;
@@ -364,7 +393,9 @@ body {
   display: flex;
   gap: 4px;
 }
-
+.uv_index h1{
+  margin-top: 12px;
+}
 .weather_forecast {
   width: 100%;
   height: 650px;
@@ -385,6 +416,8 @@ body {
   justify-content: space-around;
   align-items: center;
   margin-top: 30px;
+font-size: 16px;
+max-height: 24px;
 }
 
 .tue_box p:nth-of-type(2),
@@ -411,10 +444,12 @@ body {
 .main_box {
   display: flex;
   gap: 20px;
+  flex-grow: 1;
+  padding: 0 0 0 150px;
 }
 
 .lines_aside {
-  width: 370px;
+  width: 80%;
   height: 0.5px;
   background-color: #2e3e5b;
   margin: 0 auto;
