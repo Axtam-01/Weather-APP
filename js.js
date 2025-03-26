@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     searchInput.addEventListener("keypress", function (e) {
         if (e.key === "Enter") {
-            e.preventDefault();
-            const city = searchInput.value.trim();
+                       const city = searchInput.value.trim();
             if (city) {
                 getWeather(city);
                 getHourlyForecast(city);
@@ -117,5 +116,90 @@ document.addEventListener("DOMContentLoaded", function () {
         } catch (error) {
             console.error("Error fetching air conditions:", error);
         }
+    }    
+
+
+
+    
+    const forecastBoxes = document.querySelectorAll(".weather_forecast > div");
+
+    searchInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+            const city = searchInput.value.trim();
+            if (city) {
+                get7DayForecast(city);
+            }
+        }
+    });
+
+    async function get7DayForecast(city) {
+        try {
+            const response = await fetch(`${FORECAST_URL}?q=${city}&units=metric&appid=${API_KEY}`);
+            const data = await response.json();
+
+            if (data.cod !== "200") {
+                alert("City not found. Please try again.");
+                return;
+            }
+
+            const dailyForecasts = processForecastData(data.list);
+
+            forecastBoxes.forEach((box, index) => {
+                if (index < dailyForecasts.length) {
+                    const forecast = dailyForecasts[index];
+
+                    box.children[0].textContent = forecast.date; // Kun nomi
+                    box.children[1].src = `https://openweathermap.org/img/wn/${forecast.icon}.png`; // Ob-havo rasmi
+                    box.children[2].textContent = forecast.weather; // Ob-havo turi
+                    box.children[3].innerHTML = `<span>${forecast.temp_max}</span>/${forecast.temp_min}`; // Max/Min harorat
+                }
+            });
+
+        } catch (error) {
+            console.error("Error fetching forecast:", error);
+            alert("An error occurred: Check your Internet connection.");
+        }
     }
+
+    function processForecastData(list) {
+        let dailyData = {};
+
+        list.forEach((item) => {
+            const date = new Date(item.dt * 1000).toLocaleDateString("en-US", { weekday: "short" });
+
+            if (!dailyData[date]) {
+                dailyData[date] = {
+                    temp_max: Math.round(item.main.temp_max),
+                    temp_min: Math.round(item.main.temp_min),
+                    weather: item.weather[0].main,
+                    icon: item.weather[0].icon
+                };
+            }
+        });
+
+        return Object.keys(dailyData).map(date => ({
+            date,
+            ...dailyData[date]
+        })).slice(0, 7); // Faqat 7 kunlik prognozni olish
+    }
+
+
+
+
+
+
+
+
+
+
+  
 });
+
+function openNav() {
+    document.getElementById("sidebar").classList.add("open");
+}
+
+function closeNav() {
+    document.getElementById("sidebar").classList.remove("open");
+}
+
